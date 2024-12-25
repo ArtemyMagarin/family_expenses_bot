@@ -2,6 +2,8 @@ services:
   family_expense_bot:
     build: .
     container_name: expense_bot
+    volumes:
+      - ./shared/:/usr/src/app/shared/
     environment:
       - API_TOKEN=${API_TOKEN}
     restart: unless-stopped

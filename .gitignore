@@ -1,4 +1,5 @@
 venv
+shared
 .DS_Store
 *.db
 .env

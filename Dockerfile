@@ -5,13 +5,11 @@ FROM python:3.12-slim
 WORKDIR /usr/src/app
 
 # Copy the bot code and requirements file into the container
-COPY . .
+COPY bot.py bot.py
+COPY requirements.txt requirements.txt
 
 # Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
-
-# Expose the port for debugging purposes (optional)
-EXPOSE 5000
 
 # The command to run the bot program
 CMD ["python", "bot.py"]

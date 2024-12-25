@@ -11,7 +11,7 @@ API_TOKEN = os.environ["API_TOKEN"]
 bot = telebot.TeleBot(API_TOKEN)
 
 # Database setup
-conn = sqlite3.connect("expenses.db", check_same_thread=False)
+conn = sqlite3.connect("shared/expenses.db", check_same_thread=False)
 cursor = conn.cursor()
 
 # Create the expenses table if it does not exist
